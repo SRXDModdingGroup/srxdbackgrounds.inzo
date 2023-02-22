@@ -4940,13 +4940,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5023263545554926103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf80dc359b912b9458b1beefdb347977, type: 3}
+  m_Script: {fileID: 11500000, guid: 3930ba592ed3df445904621af5a56ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 1798708413249349713}
-  axis: {x: 0, y: 0, z: 0}
-  initialRate: 0
-  initialPhase: 0
+  root: {fileID: 4351068973596603261}
+  axis: {x: 0, y: 1, z: 0}
+  rate: 0
+  initialRotation: 0
 --- !u!114 &8543118596023577591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,13 +4956,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5023263545554926103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3930ba592ed3df445904621af5a56ba1, type: 3}
+  m_Script: {fileID: 11500000, guid: bf80dc359b912b9458b1beefdb347977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 4351068973596603261}
-  axis: {x: 0, y: 0, z: 0}
-  initialRate: 0
-  initialRotation: 0
+  root: {fileID: 1798708413249349713}
+  axis: {x: 0, y: 1, z: 0}
+  rate: 0
+  initialPhase: 0
 --- !u!1 &6174238935462886274
 GameObject:
   m_ObjectHideFlags: 0
