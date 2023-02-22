@@ -1,0 +1,11 @@
+{
+  "name": "srxdbackgrounds.inzo",
+  "version": "1.0.0",
+  "displayName": "SRXD INZO Background",
+  "unity": "2022.1",
+  "unityRelease": "12f1",
+  "description": "SRXD background inspired by the video for Overthinker by INZO",
+  "dependencies": {
+    "srxdbackgrounds.common": "1.0.0"
+  }
+}

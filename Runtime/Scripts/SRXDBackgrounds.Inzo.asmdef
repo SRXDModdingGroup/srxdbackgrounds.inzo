@@ -1,0 +1,16 @@
+{
+    "name": "SRXDBackgrounds.Inzo",
+    "rootNamespace": "SRXDBackgrounds.Inzo",
+    "references": [
+        "SRXDBackgrounds.Common"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
