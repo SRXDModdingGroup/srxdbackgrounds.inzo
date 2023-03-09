@@ -7,17 +7,20 @@ namespace SRXDBackgrounds.Inzo {
         [SerializeField] private float envelopeDuration;
         [SerializeField] private float maxEnvelopeIntensity;
 
-        private EnvelopeInverted envelope;
+        private EnvelopeBasic envelope;
 
-        private void Awake() => envelope = new EnvelopeInverted { Duration = envelopeDuration };
+        private void Awake() => envelope = new EnvelopeBasic {
+            Duration = envelopeDuration,
+            Invert = true,
+            InterpolationType = InterpolationType.EaseOut
+        };
 
         private void LateUpdate() {
             float deltaTime = Time.deltaTime;
-            float value = envelope.Update(deltaTime);
-            float intensity = maxEnvelopeIntensity * value * value;
+            float value = maxEnvelopeIntensity * envelope.Update(deltaTime);
 
             foreach (var crystal in crystals)
-                crystal.SetInnerIntensity(intensity);
+                crystal.SetInnerIntensity(value);
         }
 
         public void Trigger() {

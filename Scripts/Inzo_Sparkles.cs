@@ -13,12 +13,18 @@ namespace SRXDBackgrounds.Inzo {
         [SerializeField] private float terrainSmootherDownward;
 
         private bool playing;
-        private OscillatorSine terrainLightOscillator;
-        private SmootherLinear terrainLightSmoother;
+        private Oscillator terrainLightOscillator;
+        private Filter terrainLightFilter;
 
         private void Awake() {
-            terrainLightOscillator = new OscillatorSine { Speed = terrainOscillatorSpeed };
-            terrainLightSmoother = new SmootherLinear { RateUpward = terrainSmootherUpward, RateDownward = terrainSmootherDownward };
+            terrainLightOscillator = new Oscillator {
+                Speed = terrainOscillatorSpeed,
+                Type = OscillatorType.Sine
+            };
+            terrainLightFilter = new Filter {
+                RateUpward = terrainSmootherUpward,
+                RateDownward = terrainSmootherDownward
+            };
         }
 
         private void LateUpdate() {
@@ -26,7 +32,7 @@ namespace SRXDBackgrounds.Inzo {
             float oscillatorValue = terrainLightOscillator.Update(deltaTime);
             float target = playing ? Mathf.Lerp(terrainOscillatorMin, 1f, oscillatorValue) : 0f;
             
-            terrain.SetMiddleLightColor(1, terrainLightSmoother.Update(target, deltaTime) * colorToTerrain);
+            terrain.SetMiddleLightColor(1, terrainLightFilter.Update(target, deltaTime) * colorToTerrain);
         }
 
         public void Play() {

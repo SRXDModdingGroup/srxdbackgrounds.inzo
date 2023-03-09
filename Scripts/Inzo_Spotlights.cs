@@ -19,12 +19,15 @@ namespace SRXDBackgrounds.Inzo {
         [SerializeField] private float maxOscillatorAmount;
         [SerializeField] private float spread;
 
-        private OscillatorSquare oscillator;
+        private Oscillator oscillator;
         private float oscillatorAmount;
         private float intensity;
 
         private void Awake() {
-            oscillator = new OscillatorSquare { Speed = oscillatorSpeed };
+            oscillator = new Oscillator {
+                Speed = oscillatorSpeed,
+                Type = OscillatorType.Square
+            };
             intensity = defaultIntensity;
         }
 

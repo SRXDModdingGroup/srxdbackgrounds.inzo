@@ -30,8 +30,8 @@ namespace SRXDBackgrounds.Inzo {
         private ContinuousRotation continuousRotation;
         private EnvelopeBasic lightEffectPhaseEnvelope1;
         private EnvelopeBasic lightEffectPhaseEnvelope2;
-        private EnvelopeInverted rimEnvelope;
-        private OscillatorSquare lightOscillator;
+        private EnvelopeBasic rimEnvelope;
+        private Oscillator lightOscillator;
         private Material pyramidBodyMainMaterial;
         private Material pyramidBodyNotchMaterial;
         private Material pyramidRimMaterial;
@@ -43,8 +43,14 @@ namespace SRXDBackgrounds.Inzo {
         private void Awake() {
             lightEffectPhaseEnvelope1 = new EnvelopeBasic();
             lightEffectPhaseEnvelope2 = new EnvelopeBasic();
-            rimEnvelope = new EnvelopeInverted { Duration = rimEffectDuration };
-            lightOscillator = new OscillatorSquare { Speed = lightOscillatorSpeed };
+            rimEnvelope = new EnvelopeBasic {
+                Duration = rimEffectDuration,
+                Invert = true
+            };
+            lightOscillator = new Oscillator {
+                Speed = lightOscillatorSpeed,
+                Type = OscillatorType.Square
+            };
             pyramidBodyMainMaterial = pyramidBodyRenderer.materials[0];
             pyramidBodyNotchMaterial = pyramidBodyRenderer.materials[1];
             pyramidRimMaterial = pyramidRimRenderer.material;

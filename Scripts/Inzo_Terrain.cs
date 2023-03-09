@@ -23,14 +23,17 @@ namespace SRXDBackgrounds.Inzo {
         [SerializeField] private float trianglesPulseDuration;
         
         private EnvelopeBasic wavePhaseEnvelope;
-        private EnvelopeInverted trianglePulseEnvelope;
+        private EnvelopeBasic trianglePulseEnvelope;
         private Material terrainMaterial;
         private Material trianglesMaterial;
         private Color[] middleLightColors;
 
         private void Awake() {
             wavePhaseEnvelope = new EnvelopeBasic { Duration = waveDuration };
-            trianglePulseEnvelope = new EnvelopeInverted { Duration = trianglesPulseDuration };
+            trianglePulseEnvelope = new EnvelopeBasic {
+                Duration = trianglesPulseDuration,
+                Invert = true
+            };
             terrainMaterial = terrainRenderer.material;
             trianglesMaterial = trianglesRenderer.material;
             middleLightColors = new Color[middleLightSourceCount];
