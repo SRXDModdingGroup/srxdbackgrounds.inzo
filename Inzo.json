@@ -1,0 +1,17 @@
+{
+	"disableBaseBackground": true,
+	"useDepthTexture": true,
+	"assetBundles": [
+		"inzo"
+	],
+	"elements": [
+		{
+			"bundle": "inzo",
+			"asset": "InzoScene.prefab",
+			"root": 1
+		}
+	],
+	"dependencies": [
+		"srxdbackgrounds.common"
+	]
+}
