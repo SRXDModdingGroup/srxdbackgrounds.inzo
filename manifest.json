@@ -1,0 +1,13 @@
+{
+  "name": "srxdbackgrounds.inzo",
+  "description": "SRXD background inspired by the video for Overthinker by INZO",
+  "version": "1.0.1",
+  "repository": "DominicAglialoro/srxdbackgrounds.inzo",
+  "dependencies": [
+	{
+	  "name": "srxdbackgrounds.common",
+	  "version": "1.0.1",
+	  "repository": "SRXDModdingGroup/srxdbackgrounds.common"
+	}
+  ]
+}
