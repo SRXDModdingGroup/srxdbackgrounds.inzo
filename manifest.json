@@ -5,6 +5,11 @@
   "repository": "DominicAglialoro/srxdbackgrounds.inzo",
   "dependencies": [
 	{
+	  "name": "SRXDCustomVisuals",
+	  "version": "1.2.3",
+	  "repository": "SRXDModdingGroup/SRXDCustomVisuals"
+	},
+	{
 	  "name": "srxdbackgrounds.common",
 	  "version": "1.0.1",
 	  "repository": "SRXDModdingGroup/srxdbackgrounds.common"
