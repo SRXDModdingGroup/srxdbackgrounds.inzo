@@ -10,8 +10,5 @@
 			"asset": "InzoScene.prefab",
 			"root": 1
 		}
-	],
-	"dependencies": [
-		"srxdbackgrounds.common"
 	]
 }
