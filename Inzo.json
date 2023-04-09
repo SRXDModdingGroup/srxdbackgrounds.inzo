@@ -1,9 +1,6 @@
 {
 	"disableBaseBackground": true,
 	"useDepthTexture": true,
-	"assetBundles": [
-		"inzo"
-	],
 	"elements": [
 		{
 			"bundle": "inzo",
